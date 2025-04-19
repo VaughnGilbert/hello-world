@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trey's first website!</title>
+    <style>
+      body {
+        background-color: #8ee66b;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1 {
+        color: #0080ff;
+      }
+    </style>
+    <script>
+      // This is a comment in JavaScript
+      console.log("Hello, world!");
+      alert("Hello, world!");
+      document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("DOM fully loaded and parsed");
+      });
+      // Function to increment the counter
+      function incrementCounter() {
+        const counterElement = document.getElementById("counter");
+        let count = parseInt(counterElement.innerText, 10);
+        count = count + Math.random();
+        counterElement.innerText = count;
+      }
+      // Add event listener to the button
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("increment");
+        button.addEventListener("click", incrementCounter);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <!-- A button that will increment a number in a p tag -->
+    <p id="counter">0</p>
+    <button id="increment">Increment</button>
+  </body>
+</html>
